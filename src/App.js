@@ -2,14 +2,17 @@ import { GlobalStyles } from "./styles/global";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes } from "./routes";
 import { Header } from "./components/Header";
+import { UseMovieProvider } from "./context/useMovieContext";
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <GlobalStyles />
-      <Routes />
-    </Router>
+    <UseMovieProvider>
+      <Router>
+        <Header />
+        <GlobalStyles />
+        <Routes />
+      </Router>
+    </UseMovieProvider>
   );
 };
 

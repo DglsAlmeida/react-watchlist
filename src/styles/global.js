@@ -10,4 +10,12 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: "Source Sans Pro", sans-serif;
   }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;

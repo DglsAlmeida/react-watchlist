@@ -10,8 +10,6 @@ export const AddMovieContainer = styled.div`
 export const AddMovieContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   input {
     width: 500px;
@@ -26,5 +24,9 @@ export const AddMovieContent = styled.div`
     &::placeholder {
       font-size: 1rem;
     }
+  }
+
+  ul {
+    list-style-type: none;
   }
 `;

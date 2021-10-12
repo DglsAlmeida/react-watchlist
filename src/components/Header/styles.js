@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  height: 40px;
+  height: 50px;
   display: flex;
   align-items: center;
   background-color: #032541;
@@ -43,7 +43,7 @@ export const Navbar = styled.ul`
     font-weight: bold;
     font-size: 0.75rem;
     width: 50px;
-    height: 25px;
+    height: 30px;
     transition: filter 0.2s;
   }
 
