@@ -37,6 +37,14 @@ const UseMovieProvider = ({ children }) => {
     dispatch({ type: "ADD_MOVIE_TO_WATCHED", payload: movie });
   };
 
+  const movieToWatchlist = (movie) => {
+    dispatch({ type: "MOVE_TO_WATCHLIST", payload: movie });
+  };
+
+  const removeFromWatched = (movieId) => {
+    dispatch({ type: "REMOVE_FROM_WATCHED", payload: movieId });
+  };
+
   return (
     <useMovieContext.Provider
       value={{
@@ -45,6 +53,8 @@ const UseMovieProvider = ({ children }) => {
         addMovieToWatchlist,
         removeMovieFromWatchlist,
         addMovieToWatched,
+        movieToWatchlist,
+        removeFromWatched,
       }}
     >
       {children}

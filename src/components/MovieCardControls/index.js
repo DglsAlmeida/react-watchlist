@@ -4,7 +4,12 @@ import { useMovie } from "../../context/useMovieContext";
 import { MovieCardControlsContainer } from "./styles";
 
 export const MovieCardControls = ({ movie, type }) => {
-  const { removeMovieFromWatchlist, addMovieToWatched } = useMovie();
+  const {
+    removeMovieFromWatchlist,
+    addMovieToWatched,
+    movieToWatchlist,
+    removeFromWatched,
+  } = useMovie();
 
   return (
     <MovieCardControlsContainer>
@@ -21,10 +26,10 @@ export const MovieCardControls = ({ movie, type }) => {
 
       {type === "wacthed" && (
         <>
-          <button /*onClick={() => addMovieToWatched(movie)} */>
+          <button onClick={() => movieToWatchlist(movie)}>
             <BsFillEyeSlashFill size={20} color="#FFF" />
           </button>
-          <button /*onClick={() => removeMovieFromWatchlist(movie.id)} */>
+          <button onClick={() => removeFromWatched(movie.id)}>
             <IoMdClose size={20} color="#FFF" />
           </button>
         </>

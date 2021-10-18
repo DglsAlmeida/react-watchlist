@@ -11,13 +11,17 @@ import {
 } from "./styles";
 
 export const ResultMovieCard = ({ movie }) => {
-  const { addMovieToWatchlist, watchlist } = useMovie();
+  const { addMovieToWatchlist, watchlist, watched } = useMovie();
 
-  const checkIfMovieAlreadyExist = watchlist.find(
+  const AddedInWatchlist = watchlist.find(
     (watchMovie) => watchMovie.id === movie.id
   );
 
-  const watchlistDisabled = checkIfMovieAlreadyExist ? true : false;
+  const AddedInWatched = watched.find(
+    (watchMovie) => watchMovie.id === movie.id
+  );
+
+  const watchlistDisabled = AddedInWatchlist || AddedInWatched ? true : false;
 
   return (
     <ResultMovieCardContainer>
